@@ -1,0 +1,31 @@
+html {
+        background: 
+        url(https://www.amnh.org/var/ezflow_site/storage/images/media/amnh/images/explore/ology-images/paleontology/drawing-dinos/draw_mono_anim/2730368-1-eng-US/draw_mono_anim.gif)
+        no-repeat center center fixed;
+        background-size: cover;
+
+        input[type="button"]:hover {
+        background-color: darkblue;
+        cursor: pointer;
+    }
+
+    }
+    body { 
+        height: 100%;
+    }
+    .button {
+        background-color: red;
+        
+    }
+    h1 {
+        color: brown;
+    }
+    input[type= "button"] {
+        background-color: red;
+        color: white;
+    }
+        input.navButton {
+        background-color: blue;
+        color: white;
+        }
+       
