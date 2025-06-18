@@ -1,0 +1,163 @@
+ body {
+   background-image: url('https://t4.ftcdn.net/jpg/09/62/35/55/360_F_962355507_liutWdJ0hDIkZfskyY6aX5dLsou7dU45.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+
+
+ .h1{
+   font-size: 3rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
+   text-align: center;
+   color: rgb(162, 174, 181);
+ }
+
+ .center-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
+   text-align: center;
+ }
+  .cornerContainer{
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+ }
+
+    .testYourself {
+    text-align: center;
+    background-color: darkblue;
+    padding: 5px;
+    border: 3px solid rgb(1, 1, 92);
+    font-size: 3rem;
+    cursor: pointer;
+    border-radius: 30px;
+    color:aliceblue;
+    width: 45rem;
+    
+  }
+
+  .testYourself:hover{
+      background-color: rgb(2, 2, 162);
+      font-size:2.75rem;
+      color:white;
+      border: 6px solid rgb(3, 3, 203);
+
+    }
+
+  .random {
+    text-align: center;
+    background-color: darkblue;
+    padding: 5px;
+    border: 3px solid rgb(1, 1, 92);
+    font-size: 3rem;
+    cursor: pointer;
+    border-radius: 30px;
+    color:aliceblue;
+    display: flex;
+    gap: 10%;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    width: 45rem;
+
+  }
+  .random:hover{
+      background-color: rgb(2, 2, 162);
+      font-size:2.75rem;
+      color:white;
+      border: 6px solid rgb(2, 2, 224);
+
+
+    }
+
+    .missionaryMode {
+    text-align: center;
+    padding: 5px;
+    font-size:3rem;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: darkblue;
+    border: 3px solid rgb(1, 1, 92);
+    color:aliceblue;
+    width: 45rem;
+    
+  }
+
+  .missionaryMode:hover{
+      background-color: rgb(2, 2, 162);
+      cursor:pointer;
+      font-size:2.75rem;
+      color:white;
+      border: 6px solid rgb(2, 2, 224);
+    }
+
+
+  .showScripture{
+    color: lightgrey;
+    font-size: 2rem;
+    text-align:center;
+    max-width: 80vw;
+    max-height: 60vh;
+    overflow-y: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  .randomSmall{
+    font-size: 1.25rem;
+    padding: 5px 10px;
+    width: auto;
+    border-width: 2px;
+  }
+
+  .testYourselfSmall{
+    font-size: 1.25rem;
+    padding: 5px 10px;
+    width: auto;
+    border-width: 2px;
+  }
+
+  .missionaryModeSmall{
+    font-size: 1.25rem;
+    padding: 5px 10px;
+    width: auto;
+    border-width: 2px;
+  }
+
+  .likeButton{
+    content: '♡';
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    position: fixed;
+    top: 20rem;
+    right: 10rem;
+    color: rgb(110, 2, 2);
+    background-color: rgb(34, 34, 134);
+    background-color: darkblue;
+    border: 1.5px solid rgb(1, 1, 92);
+    color:aliceblue;
+  }
+
+  .likeButton:hover{
+    font-size: 2rem;
+    cursor:pointer;
+    background-color: rgb(2, 2, 162);
+    text-align: center;
+    color:white;
+    border: 3px solid rgb(2, 2, 224);
+  }
+  
+  #showScripture,
+  #testingPage,
+  #mishModePage{
+    display: none;
+  }
