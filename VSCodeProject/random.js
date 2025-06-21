@@ -8,29 +8,63 @@
     const testButton = document.getElementById("testing");
     const mishinarie = document.getElementById("mishMode");
     //^^^french version of missionary^^^
-    const showScripture = document.getElementById("showScripture")
+
+    const smallHomeButton = document.getElementById("home");
+    const smallTestButton = document.getElementById("testingCor");
+    const smallRandomScripture = document.getElementById("ranButtonCor");
+    const smallMissionaryButton = document.getElementById("mishModeCor");
+
+    const likenButton = document.getElementById("like");
+    const corContainerId = document.getElementById("cornerContainerId");
+    const showScripture = document.getElementById("showScripture");
+    
+    window.onload=function onStart(){
+      likenButton.style.display="none";
+      corContainerId.style.display="none";
+    }
 
     function showPages(pageId){
 
       document.getElementById("showScripture").style.display="none";
       document.getElementById("testingPage").style.display="none";
       document.getElementById("mishModePage").style.display="none";
+      document.getElementById("homePage").style.display="none"
 
       document.getElementById(pageId).style.display = "block";
   }
-    testButton.addEventListener("click", () => {
-      showPages("testingPage");
-    })
 
+    smallHomeButton.addEventListener("click", () => {
+      showPages("homePage");
+      document.getElementById("cornerContainerId").style.display="none";
+      testButton.style.display="block";
+      mishinarie.style.display="block";
+
+    })
+    testButton.addEventListener("click", () => {
+
+     
+      showPages("testingPage");
+      document.getElementById("testingPage");
+      
+
+    })
+    
     mishinarie.addEventListener("click", () => {
+      
       showPages("mishModePage");
+      document.getElementById("mishModePage");
     })
 
     mainButton.addEventListener("click", () => {
 
+      likenButton.style.display = "block";
+      corContainerId.style.display = "block";
+      
+      smallRandomScripture.style.display = "none";
       testButton.style.display = "none";
       mishinarie.style.display = "none";
-      
+
+
       showPages("showScripture");
       
       function scriptures(bookTitles) {
@@ -81,5 +115,12 @@
     showScripture.innerHTML = `<h2>${verseTitle}</h2><p>${text}</p>`
 
   });
+  testButton.addEventListener("click", () => {
+    showPages("testingPage");
+
+    function testinput(){
+      
+    }
+  })
     
 });
