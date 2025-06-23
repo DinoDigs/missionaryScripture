@@ -31,26 +31,62 @@
       document.getElementById("homePage").style.display="none"
 
       document.getElementById(pageId).style.display = "block";
-  }
+    }
 
     smallHomeButton.addEventListener("click", () => {
       showPages("homePage");
       document.getElementById("cornerContainerId").style.display="none";
       testButton.style.display="block";
       mishinarie.style.display="block";
+      mainButton.style.display="block";
 
     })
-    testButton.addEventListener("click", () => {
 
-     
+    smallMissionaryButton.addEventListener("click", () => {
+      testButton.style.display="none";
+      mainButton.style.display="none";
+      mishinarie.style.display="block"
+      corContainerId.style.display="block";
+      showPages("mishModePage");
+      document.getElementById("mishModePage");
+    })
+
+    smallTestButton.addEventListener("click", () => {
+      mishinarie.style.display="none";
+      mainButton.style.display="none";
+      testButton.style.display="block";
+      corContainerId.style.display="block";
       showPages("testingPage");
       document.getElementById("testingPage");
-      
+    })
+
+    smallRandomScripture.addEventListener("click", () => {
+      likenButton.style.display = "block";
+      corContainerId.style.display = "block";
+      testButton.style.display = "none";
+      mishinarie.style.display = "none";
+      mainButton.style.display= "block";
+      showPages("showScripture");
+      showScripture.innerHTML = `<h2>${verseTitle}</h2><p>${text}</p>`
+    })
+
+    testButton.addEventListener("click", () => {
+      mishinarie.style.display="none";
+      mainButton.style.display="none";
+      corContainerId.style.display="block";
+
+      showPages("testingPage");
+      document.getElementById("testingPage");
+      mishinarie.style.display="none";
+      mainButton.style.display="none";
 
     })
     
     mishinarie.addEventListener("click", () => {
       
+      testButton.style.display="none";
+      mainButton.style.display="none";
+      corContainerId.style.display="block";
       showPages("mishModePage");
       document.getElementById("mishModePage");
     })
@@ -59,8 +95,6 @@
 
       likenButton.style.display = "block";
       corContainerId.style.display = "block";
-      
-      smallRandomScripture.style.display = "none";
       testButton.style.display = "none";
       mishinarie.style.display = "none";
 
@@ -72,7 +106,7 @@
       }
 
 
-     let index = scriptures(bookTitles);
+      let index = scriptures(bookTitles);
       // selectedBook = "Genesis" 
       let selectedBook = bookTitles[index]
       //selects book from array
@@ -94,14 +128,14 @@
     
         let bookVerse = data.filter(eachVerse => {
           return eachVerse.book_title === selectedBook;
-      });
+        });
 
-      let randomIndex = Math.floor(Math.random() * bookVerse.length)
-       /*{volume_title: 'Old Testament', book_title: 'Job', book_short_title: 'Job',
-       chapter_number: 9, verse_number: 26, …}
-        */
+        let randomIndex = Math.floor(Math.random() * bookVerse.length)
+         /*{volume_title: 'Old Testament', book_title: 'Job', book_short_title: 'Job',
+         chapter_number: 9, verse_number: 26, …}
+         */
 
-       let randomVerse = bookVerse[randomIndex];
+        let randomVerse = bookVerse[randomIndex];
 
         let verseTitle = randomVerse.verse_title;
         let title = randomVerse.volume_title;
@@ -110,17 +144,8 @@
         let verse = randomVerse.verse_number;
         let text = randomVerse.scripture_text;
 
-         //console.log(title,"\n",verseTitle,text,"\n\n");    
+        showScripture.innerHTML = `<h2>${verseTitle}</h2><p>${text}</p>`
 
-    showScripture.innerHTML = `<h2>${verseTitle}</h2><p>${text}</p>`
-
-  });
-  testButton.addEventListener("click", () => {
-    showPages("testingPage");
-
-    function testinput(){
-      
-    }
-  })
+      });
     
-});
+    });
